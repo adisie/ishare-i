@@ -12,6 +12,21 @@ header {
             display: flex;
             align-items: center;
 
+            // side bar toggler
+            .toggler-btn-container {
+                display: none;
+                .left-sidebar-toggler {
+                    display: flex;
+                    align-items: center;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 1.3rem;
+                    color: $primary-txt-color;
+                    margin-right: .3rem;
+                }
+            }
+
             .logo-link {
                 color: $primary-txt-color;
                 text-decoration: none;
@@ -43,7 +58,7 @@ header {
                     font-family: 'Times New Roman', Times, serif;
 
                     &::placeholder {
-                        color: $primary-txt-color;
+                        color: rgba($primary-txt-color,.5);
                     }
                 }
 
@@ -56,8 +71,9 @@ header {
                 }
             }
 
+            // login page toggler
             .header-login-container {
-                // display: none;
+                display: none;
                 .header-login-link {
                     text-decoration: none;
                     color: $primary-txt-color;
@@ -66,6 +82,26 @@ header {
                     border: .13rem solid rgba($primary-txt-color,.5);
                     border-radius: .15rem;
                     font-size: .85rem;
+                }
+            }
+
+            // user profile togler
+            .header-user-profile-container {
+                display: none;
+                align-items: center;
+
+                .header-user-profile-link {
+                    text-decoration: none;
+                    margin-left: .5rem;
+                    display: flex;
+                    align-items: center;
+                    
+                    img {
+                        width: 28px;
+                        height: 28px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
                 }
             }
         }
