@@ -44,9 +44,174 @@
             }
         }
 
+        // group left side bar 
+        .group-left-sidebar {
+            padding-top: .3rem;
+            padding-right: .5rem;
+            display: grid;
+            grid-template-rows: 2rem 1fr;
+
+            .sidebar-header {
+                padding: .35rem .15rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: .15rem solid rgba($primary-bg-color,.5);
+
+                .back-to-home-link {
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    color: $primary-bg-color;
+                    margin-right: .15rem;
+                }
+
+                .group-nav {
+                    flex-grow: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    nav {
+                        ul {
+                            list-style-type: none;
+                            display: flex;
+                            li {
+                                margin: 0 .35rem;
+
+                                .link {
+                                    text-decoration: none;
+                                    color: $primary-bg-color;
+                                }
+                            }
+                        }
+                    }
+
+                    .group-search {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        background: rgba($primary-bg-color,.15);
+                        padding: .005rem .35rem;
+                        border-radius: .3rem;
+                        
+                        input {
+                            outline: none;
+                            border: none;
+                            background: none;
+                            width: 100%;
+                            font-family: 'Times New Roman', Times, serif;
+                            color: $primary-bg-color;
+
+                            &::placeholder {
+                                color: rgba($primary-bg-color,.5);
+                            }
+                        }
+
+                        button {
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            font-size: 1.1rem;
+                            color: $primary-bg-color;
+                        }
+                    }
+
+                    .new-group-btn {
+                        display: flex;
+                        align-items: center;
+                        margin-left: .35rem;
+
+                        button {
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            font-size: 1.3rem;
+                            color: $primary-bg-color;
+                        }
+                    }
+                }
+            }
+
+            .group-list {
+                margin-top: .75rem;
+                height: 85vh;
+                overflow: auto;
+
+                &::-webkit-scrollbar {
+                    width: 3px;
+                }
+
+                &:hover::-webkit-scrollbar-track {
+                    background: rgba($primary-bg-color,.25);
+                    border-radius: 3px;
+                }
+
+                &:hover::-webkit-scrollbar-thumb {
+                    background: rgba($primary-bg-color,.35);
+                    border-radius: 3px;
+                }
+
+
+                ul {
+                    list-style-type: none;
+
+                    li {
+                        margin-bottom: .35rem;
+                        padding: .3rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: $primary-bg-color;
+                        border-bottom: .12rem solid rgba($primary-bg-color,.15);
+                        // transition: .3s ease-in-out;
+
+                        // &:hover {
+                        //     border-color: rgba($primary-bg-color,.5);
+                        //     margin-left: .25rem;
+                        // }
+
+                        .group-name-profile {
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+
+                            img {
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%;
+                                margin-right: .35rem;
+                            }
+                        }
+
+                        .group-auth-btn {
+                            display: flex;
+                            align-items: center;
+
+                            button {
+                                background: none;
+                                border: .1rem solid rgba($primary-bg-color,.35);
+                                border-radius: .3rem;
+                                font-family: 'Times New Roman', Times, serif;
+                                padding: .13rem 1.3rem;
+                                color: $primary-bg-color;
+                                cursor: pointer;
+                                transition: .3s ease-in-out;
+
+                                &:hover {
+                                    background: $primary-bg-color;
+                                    color: $primary-txt-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         // home content conatiner
         .home-content-container {
             grid-column: 2/span 4;
+            background: rgb(211, 211, 211);
         }
     }
 }

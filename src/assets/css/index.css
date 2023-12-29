@@ -79,7 +79,7 @@ header .header .header-content .search-bar-container button {
   border: none;
   cursor: pointer;
   color: rgb(202, 202, 202);
-  font-size: 1.3rem;
+  font-size: 1.12rem;
 }
 header .header .header-content .header-login-container {
   display: none;
@@ -148,6 +148,138 @@ header .header .header-content .header-user-profile-container .header-user-profi
   color: rgb(6, 89, 61);
   flex-grow: 1;
 }
+.home-container .home .group-left-sidebar {
+  padding-top: 0.3rem;
+  padding-right: 0.5rem;
+  display: grid;
+  grid-template-rows: 2rem 1fr;
+}
+.home-container .home .group-left-sidebar .sidebar-header {
+  padding: 0.35rem 0.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.15rem solid rgba(6, 89, 61, 0.5);
+}
+.home-container .home .group-left-sidebar .sidebar-header .back-to-home-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: rgb(6, 89, 61);
+  margin-right: 0.15rem;
+}
+.home-container .home .group-left-sidebar .sidebar-header .group-nav {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-container .home .group-left-sidebar .sidebar-header .group-nav nav ul {
+  list-style-type: none;
+  display: flex;
+}
+.home-container .home .group-left-sidebar .sidebar-header .group-nav nav ul li {
+  margin: 0 0.35rem;
+}
+.home-container .home .group-left-sidebar .sidebar-header .group-nav nav ul li .link {
+  text-decoration: none;
+  color: rgb(6, 89, 61);
+}
+.home-container .home .group-left-sidebar .sidebar-header .group-nav .group-search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(6, 89, 61, 0.15);
+  padding: 0.005rem 0.35rem;
+  border-radius: 0.3rem;
+}
+.home-container .home .group-left-sidebar .sidebar-header .group-nav .group-search input {
+  outline: none;
+  border: none;
+  background: none;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(6, 89, 61);
+}
+.home-container .home .group-left-sidebar .sidebar-header .group-nav .group-search input::placeholder {
+  color: rgba(6, 89, 61, 0.5);
+}
+.home-container .home .group-left-sidebar .sidebar-header .group-nav .group-search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: rgb(6, 89, 61);
+}
+.home-container .home .group-left-sidebar .sidebar-header .group-nav .new-group-btn {
+  display: flex;
+  align-items: center;
+  margin-left: 0.35rem;
+}
+.home-container .home .group-left-sidebar .sidebar-header .group-nav .new-group-btn button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: rgb(6, 89, 61);
+}
+.home-container .home .group-left-sidebar .group-list {
+  margin-top: 0.75rem;
+  height: 85vh;
+  overflow: auto;
+}
+.home-container .home .group-left-sidebar .group-list::-webkit-scrollbar {
+  width: 3px;
+}
+.home-container .home .group-left-sidebar .group-list:hover::-webkit-scrollbar-track {
+  background: rgba(6, 89, 61, 0.25);
+  border-radius: 3px;
+}
+.home-container .home .group-left-sidebar .group-list:hover::-webkit-scrollbar-thumb {
+  background: rgba(6, 89, 61, 0.35);
+  border-radius: 3px;
+}
+.home-container .home .group-left-sidebar .group-list ul {
+  list-style-type: none;
+}
+.home-container .home .group-left-sidebar .group-list ul li {
+  margin-bottom: 0.35rem;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(6, 89, 61);
+  border-bottom: 0.12rem solid rgba(6, 89, 61, 0.15);
+}
+.home-container .home .group-left-sidebar .group-list ul li .group-name-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.home-container .home .group-left-sidebar .group-list ul li .group-name-profile img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 0.35rem;
+}
+.home-container .home .group-left-sidebar .group-list ul li .group-auth-btn {
+  display: flex;
+  align-items: center;
+}
+.home-container .home .group-left-sidebar .group-list ul li .group-auth-btn button {
+  background: none;
+  border: 0.1rem solid rgba(6, 89, 61, 0.35);
+  border-radius: 0.3rem;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0.13rem 1.3rem;
+  color: rgb(6, 89, 61);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.home-container .home .group-left-sidebar .group-list ul li .group-auth-btn button:hover {
+  background: rgb(6, 89, 61);
+  color: rgb(202, 202, 202);
+}
 .home-container .home .home-content-container {
   grid-column: 2/span 4;
+  background: rgb(211, 211, 211);
 }
