@@ -151,6 +151,89 @@
                     border-radius: 3px;
                 }
 
+                // new group form container
+                .new-group-form-container {
+                    section {
+                        background: rgb(215, 215, 215);
+                        padding: .5rem 1.3rem;
+                        border-radius: .35rem;
+                        span {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 1.03rem;
+                            font-weight: bold;
+                            color: $primary-bg-color;
+                        }
+
+                        .input-control {
+                            display: flex;
+                            margin: .35rem;
+                            padding: .13rem .3rem;
+                            border-bottom: 1px solid rgba($primary-bg-color,.15);
+
+                            label {
+                                text-transform: capitalize;
+                                color: $primary-bg-color;
+                            }
+
+                            input {
+                                background: none;
+                                border: 1px solid rgba($primary-bg-color,.5);
+                                outline: none;
+                                font-family: 'Times New Roman', Times, serif;
+                                font-size: .9rem;
+                                padding: .13rem .3rem;
+                                border-radius: .3rem;
+                                color: $primary-bg-color;
+                                width: 65%;
+                                text-align: left;
+                            }
+
+                            .error {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: small;
+                                color: $primary-error-color;
+                            }
+
+                            select {
+                                background: none;
+                                outline: none;
+                                border: 1px solid rgba($primary-bg-color,.5);
+                                padding: 0.05rem .3rem;
+                                border-radius: .3rem;
+                                color: $primary-bg-color;
+                                font-family: 'Times New Roman', Times, serif;
+                                font-size: .9rem;
+                            }
+                        }
+
+                        .btn-container {
+                            margin: .5rem auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+
+                            button {
+                                background: $primary-bg-color;
+                                border: none;
+                                padding: .15rem 1.3rem;
+                                border-radius: .15rem;
+                                cursor: pointer;
+                                color: $primary-txt-color;
+                                font-family: 'Times New Roman', Times, serif;
+                                font-size: .9rem;
+                                transition: .3s ease-out;
+
+                                &:hover {
+                                    background: rgba($primary-bg-color,.85);
+                                }
+                            }
+                        }
+                    }
+                }
 
                 ul {
                     list-style-type: none;

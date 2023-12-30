@@ -1,27 +1,38 @@
 
 const CreateNewGroup = () => {
   return (
-    <div>
-        <form>
-            <h3>New Group</h3>
+    <div className='new-group-form-container'>
+        <section>
+            <span>new group</span>
             <div className="input-control">
-                <input type="text" name="name" placeholder="group name" />
-                <div className="error name"></div>
+                <div className="input-container">
+                    <div>
+                        <label htmlFor="name">name: </label>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                    <div className="error">group name exist</div>
+                </div>
+                
             </div>
             <div className="input-control">
-                <label htmlFor="private"></label>
-                <input type="checkbox" name="private" id="private" />
+                <label htmlFor="type">type: </label>
+                <select name="type" id="type">
+                    <option value="private">private</option>
+                    <option value="public">public</option>
+                </select>
             </div>
             <div className="input-control">
-                <input type="file" name="profile" id="profile" hidden accept="image/*" />
-                <label htmlFor="profile">pic</label>
-                <div className="error profile"></div>
+                <label htmlFor="profile">profile(optional): </label>
+                <div>
+                    <img src="" alt="" />
+                    <button>I</button>
+                </div>
             </div>
-            <div className="btn-control">
+            <div className="btn-container">
                 <button>create</button>
                 <button>cancel</button>
             </div>
-        </form>
+        </section>
     </div>
   )
 }

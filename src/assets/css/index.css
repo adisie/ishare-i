@@ -238,6 +238,78 @@ header .header .header-content .header-user-profile-container .header-user-profi
   background: rgba(6, 89, 61, 0.35);
   border-radius: 3px;
 }
+.home-container .home .group-left-sidebar .group-list .new-group-form-container section {
+  background: rgb(215, 215, 215);
+  padding: 0.5rem 1.3rem;
+  border-radius: 0.35rem;
+}
+.home-container .home .group-left-sidebar .group-list .new-group-form-container section span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.03rem;
+  font-weight: bold;
+  color: rgb(6, 89, 61);
+}
+.home-container .home .group-left-sidebar .group-list .new-group-form-container section .input-control {
+  display: flex;
+  margin: 0.35rem;
+  padding: 0.13rem 0.3rem;
+  border-bottom: 1px solid rgba(6, 89, 61, 0.15);
+}
+.home-container .home .group-left-sidebar .group-list .new-group-form-container section .input-control label {
+  text-transform: capitalize;
+  color: rgb(6, 89, 61);
+}
+.home-container .home .group-left-sidebar .group-list .new-group-form-container section .input-control input {
+  background: none;
+  border: 1px solid rgba(6, 89, 61, 0.5);
+  outline: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.9rem;
+  padding: 0.13rem 0.3rem;
+  border-radius: 0.3rem;
+  color: rgb(6, 89, 61);
+  width: 65%;
+  text-align: left;
+}
+.home-container .home .group-left-sidebar .group-list .new-group-form-container section .input-control .error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  color: rgb(184, 0, 0);
+}
+.home-container .home .group-left-sidebar .group-list .new-group-form-container section .input-control select {
+  background: none;
+  outline: none;
+  border: 1px solid rgba(6, 89, 61, 0.5);
+  padding: 0.05rem 0.3rem;
+  border-radius: 0.3rem;
+  color: rgb(6, 89, 61);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.9rem;
+}
+.home-container .home .group-left-sidebar .group-list .new-group-form-container section .btn-container {
+  margin: 0.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.home-container .home .group-left-sidebar .group-list .new-group-form-container section .btn-container button {
+  background: rgb(6, 89, 61);
+  border: none;
+  padding: 0.15rem 1.3rem;
+  border-radius: 0.15rem;
+  cursor: pointer;
+  color: rgb(202, 202, 202);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.9rem;
+  transition: 0.3s ease-out;
+}
+.home-container .home .group-left-sidebar .group-list .new-group-form-container section .btn-container button:hover {
+  background: rgba(6, 89, 61, 0.85);
+}
 .home-container .home .group-left-sidebar .group-list ul {
   list-style-type: none;
 }
