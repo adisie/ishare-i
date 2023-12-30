@@ -1,4 +1,8 @@
 import {NavLink} from 'react-router-dom'
+import {useDispatch} from 'react-redux'
+
+// actions
+import {navigator} from '../../features/easy-nav/navSlice'
 
 // default group image
 import defaultGroupProfile from '../../assets/images/defaults/profiles/group-profile-avater-2.jpg'
@@ -9,10 +13,18 @@ import { FiSearch } from "react-icons/fi"
 import { FaCirclePlus } from "react-icons/fa6"
 
 const GroupSideBar = () => {
+
+  // hooks
+  const dispatch = useDispatch()
+
+  // navigation handler
+  const backToHome = direction => {
+    dispatch(navigator(direction))
+  }
   return (
     <div className='group-left-sidebar'>
       <div className="sidebar-header"> 
-        <NavLink to={'/'} className={'back-to-home-link'}><GoArrowLeft /></NavLink>
+        <NavLink to={'/'} className={'back-to-home-link'} onClick={()=>backToHome('HOME')}><GoArrowLeft /></NavLink>
         <div className='group-nav'>
           <nav>
             <ul>

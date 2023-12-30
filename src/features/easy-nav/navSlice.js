@@ -9,7 +9,7 @@ const navSlice = createSlice({
     initialState,
     reducers: {
         navigator: (state,action) => {
-            console.log(action.payload)
+            state.MAIN_DIRECTION = action.payload
         }
     }
 })

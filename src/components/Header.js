@@ -1,4 +1,8 @@
 import {NavLink} from 'react-router-dom'
+import {useDispatch} from 'react-redux'
+
+// actions
+import {navigator} from '../features/easy-nav/navSlice'
 
 // icons
 import { FiSearch } from "react-icons/fi"
@@ -8,6 +12,14 @@ import { GiHamburgerMenu } from "react-icons/gi"
 import defautUserProfile from '../assets/images/defaults/profiles/male-profile-3.jpg'
 
 const Header = () => {
+
+  // hooks
+  const dispatch = useDispatch()
+
+  // back to home
+  const backToHome = direction => {
+    dispatch(navigator(direction))
+  }
   return (
     <header>
       <div className='sub-container header'>
@@ -15,7 +27,7 @@ const Header = () => {
           <div className='toggler-btn-container'>
             <button className='left-sidebar-toggler'><GiHamburgerMenu /></button>
           </div>
-          <NavLink to={'/'} className={'logo-link'}>ishare</NavLink>
+          <NavLink to={'/'} className={'logo-link'} onClick={()=>backToHome('HOME')}>ishare</NavLink>
         </div>
         <div className="header-content">
           <div className="search-bar-container">

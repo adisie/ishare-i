@@ -1,4 +1,8 @@
 import {NavLink} from 'react-router-dom'
+import {useDispatch} from 'react-redux'
+
+// actions
+import {navigator} from '../../features/easy-nav/navSlice'
 
 // icons
 import { IoMdHome } from "react-icons/io"
@@ -8,12 +12,18 @@ import { LuArrowDownRight } from "react-icons/lu"
 
 const HomeSideBar = () => {
 
-    
+    // hooks
+    const dispatch = useDispatch()
+
   // active link style
   const activeLinkStyle = ({isActive}) => {
     return {
       fontWeight: isActive ? 'bold' : 'normal'
     }
+  }
+
+  const navigationHandler = (direction) => {
+    dispatch(navigator(direction))
   }
 
   return (
@@ -22,11 +32,11 @@ const HomeSideBar = () => {
         <ul>
             <li>
             <IoMdHome className='icon'/>
-            <NavLink to={'/'} className={'link'} style={activeLinkStyle}>Home</NavLink>
+            <NavLink to={'/'} className={'link'} style={activeLinkStyle} onClick={()=>navigationHandler('HOME')}>Home</NavLink>
             </li>
             <li>
             <MdSupervisorAccount className='icon'/>
-            <NavLink to={'/groups'} className={'link'} style={activeLinkStyle}>Groups</NavLink>
+            <NavLink to={'/groups'} className={'link'} style={activeLinkStyle} onClick={()=>navigationHandler('GROUPS')}>Groups</NavLink>
             </li>
             <li>
             <GrChannel className='icon'/>
