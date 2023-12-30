@@ -10,7 +10,7 @@ const OnlineGroupList = () => {
             <span>group</span>
         </div>
         <div className='group-auth-btn'>
-            <button>leave</button>
+            <button>Join</button>
         </div>
         </li>
         <li>
@@ -19,7 +19,7 @@ const OnlineGroupList = () => {
             <span>online group list</span>
         </div>
         <div className='group-auth-btn'>
-            <button>leave</button>
+            <button>Add me</button>
         </div>
         </li>
     </ul>
