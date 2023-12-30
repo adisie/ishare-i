@@ -2,10 +2,12 @@ import {NavLink} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 
 // actions
-import {navigator} from '../../features/easy-nav/navSlice'
+import {navigator} from '../easy-nav/navSlice'
 
-// default group image
-import defaultGroupProfile from '../../assets/images/defaults/profiles/group-profile-avater-2.jpg'
+// sub side bar
+import ActiveGroupList from './group-sidebars/ActiveGroupList'
+import OnlineGroupList from './group-sidebars/OnlineGroupList'
+
 
 // icons
 import { GoArrowLeft } from "react-icons/go"
@@ -13,8 +15,7 @@ import { FiSearch } from "react-icons/fi"
 import { FaCirclePlus } from "react-icons/fa6"
 
 const GroupSideBar = () => {
-
-  // hooks
+     // hooks
   const dispatch = useDispatch()
 
   // navigation handler
@@ -46,17 +47,8 @@ const GroupSideBar = () => {
         </div>
       </div>
       <div className="group-list">
-        <ul>
-          <li>
-            <div className='group-name-profile'>
-              <img src={defaultGroupProfile} alt=" group profile" style={{width: '24px',height: '24px'}}/>
-              <span>group</span>
-            </div>
-            <div className='group-auth-btn'>
-              <button>leave</button>
-            </div>
-          </li>
-        </ul>
+        {/* <ActiveGroupList /> */}
+        <OnlineGroupList />
       </div>
     </div>
   )

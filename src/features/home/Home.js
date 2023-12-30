@@ -2,15 +2,14 @@ import {Outlet} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 
 // actions
-import {selectMainDirection} from '../features/easy-nav/navSlice'
+import {selectMainDirection} from '../easy-nav/navSlice'
 
 // side bars
-import HomeSideBar from '../components/sidebars/HomeSideBar' 
-import GroupSideBar from '../components/sidebars/GroupSideBar'
+import HomeSideBar from './HomeSideBar' 
+import GroupSideBar from '../groups/GroupSideBar'
 
 const Home = () => {
-
-  // states
+    // states
   const MAIN_DIRECTION = useSelector(selectMainDirection)
 
   return (

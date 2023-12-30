@@ -4,9 +4,9 @@ import Header from "./components/Header"
 
 // pages
 import LoginSignup from './pages/LoginSignup'
-import Home from './pages/Home'
+import Home from './features/home/Home'
 import Posts from './pages/Posts'
-import Groups from './pages/Groups'
+import Group from './features/groups/Group'
 import Channels from './pages/Channels'
 import Profile from './pages/Profile'
 
@@ -18,7 +18,7 @@ const App = () => {
         <Route>
           <Route path='/' element={<Home />}>
             <Route index element={<Posts />} />
-            <Route path='/groups' element={<Groups />} />
+            <Route path='/groups' element={<Group />} />
             <Route path='/channels' element={<Channels />} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/login' element={<LoginSignup />} />

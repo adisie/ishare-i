@@ -2,7 +2,7 @@ import {NavLink} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 
 // actions
-import {navigator} from '../../features/easy-nav/navSlice'
+import {navigator} from '../easy-nav/navSlice'
 
 // icons
 import { IoMdHome } from "react-icons/io"
@@ -11,7 +11,6 @@ import { GrChannel } from "react-icons/gr"
 import { LuArrowDownRight } from "react-icons/lu"
 
 const HomeSideBar = () => {
-
     // hooks
     const dispatch = useDispatch()
 
