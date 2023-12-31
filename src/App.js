@@ -1,7 +1,11 @@
 
+import Home from "./features/home/Home"
+
 const App = () => {
   return (
-    <div>App</div>
+    <div className="w-screen h-screen flex">
+      <Home />
+    </div>
   )
 }
 
