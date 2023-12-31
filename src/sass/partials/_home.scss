@@ -210,6 +210,40 @@
                             }
                         }
 
+                        .group-profile {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .profile-label-con {
+                                margin-left: .375rem;
+                                flex-grow: 1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                .profile-label {
+                                    cursor: pointer;
+
+                                    img {
+                                        width: 24px;
+                                        height: 24px;
+                                        border-radius: .1rem;
+                                    }
+                                }
+
+                                button {
+                                    background: none;
+                                    border: none;
+                                    cursor: pointer;
+                                    font-size: 1.13rem;
+                                    color: $primary-error-color;
+                                    display: flex;
+                                    align-items: center;
+                                }
+                            }
+                        }
+
                         .btn-container {
                             margin: .5rem auto;
                             display: flex;
@@ -229,6 +263,19 @@
 
                                 &:hover {
                                     background: rgba($primary-bg-color,.85);
+                                }
+                            }
+
+                            .cancel-btn {
+                                border: 1px solid rgba($primary-error-color,.5);
+                                background: none;
+                                border-radius: .15rem;
+                                color: $primary-error-color;
+                                transition: .5s;
+
+                                &:hover {
+                                    background: $primary-error-color;
+                                    color: $primary-txt-color;
                                 }
                             }
                         }
