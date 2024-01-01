@@ -22,13 +22,32 @@ const HomeNav = () => {
         dispatch(mainNavigator(direction))
     } 
 
+    // show side bar
+    const showSideBar = () => {
+        const sideBar = document.querySelector('#home-side-bar')
+        const postsDropShadow = document.querySelector('#posts-drop-shadow')
+
+        if(sideBar.classList.contains('left-[-100vw]')){
+            sideBar.classList.remove('left-[-100vw]')
+            sideBar.classList.add('left-0')
+            postsDropShadow.classList.remove('hidden')
+        }else{
+            sideBar.classList.add('left-[-100vw]')
+            sideBar.classList.remove('left-0')
+            postsDropShadow.classList.add('hidden')
+        }
+    }
+
   return (
     <div className="flex items-center justify-end">
         <nav className="max-w-[300px] flex items-center px-2 flex-grow">
             <ul className="w-full mt-3">
                 <li className="hover:ml-1 transition-all ease-linear duration-300 mb-2 flex items-center py-1 border-b border-emerald-800 border-opacity-[.15] w-full text-emerald-900 min-w-[180px]">
                     <AiOutlineHome className="inline-block text-2xl mr-1"/>
-                    <NavLink to='/' className='flex-grow text-sm' onClick={()=>mainNavigatorHandler('HOME')} >
+                    <NavLink to='/' className='flex-grow text-sm' onClick={()=>{
+                        mainNavigatorHandler('HOME')
+                        showSideBar()
+                    }} >
                         Home
                     </NavLink>
                 </li>
@@ -40,7 +59,10 @@ const HomeNav = () => {
                 </li>
                 <li className="hover:ml-1 hover:mt-1 transition-all ease-linear duration-300 mb-2 flex items-center py-1 border-b border-emerald-800 border-opacity-[.15] w-full text-emerald-900">
                     <PiUsersThreeThin className="inline-block text-2xl mr-1"/>
-                    <NavLink to='/groups' className='flex-grow text-sm' onClick={()=>mainNavigatorHandler('GROUPS')}>
+                    <NavLink to='/groups' className='flex-grow text-sm' onClick={()=>{
+                        mainNavigatorHandler('GROUPS')
+                        showSideBar()
+                    }}>
                         Groups
                     </NavLink>
                 </li>
