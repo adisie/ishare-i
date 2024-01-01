@@ -1,12 +1,15 @@
+import {Outlet} from 'react-router-dom'
 
-import Posts from "../posts/Posts"
+// sub pages
 import HomeSideBar from "./HomeSideBar"
+import GroupsSideBar from '../groups/GroupsSideBar'
 
 const Home = () => {
   return (
     <div className='flex-grow flex relative'>
-        <HomeSideBar />
-        <Posts />
+        {/* <HomeSideBar /> */}
+        <GroupsSideBar />
+        <Outlet />
     </div>
   )
 }

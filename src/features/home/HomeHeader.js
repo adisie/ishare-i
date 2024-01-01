@@ -23,7 +23,7 @@ const HomeHeader = () => {
     <div className="h-[42px] bg-emerald-800 flex items-center justify-end">
         <div className="max-w-[300px] h-full flex items-center justify-between px-2 flex-grow">
             <span className='text-2xl text-gray-400 font-bold'>
-                <NavLink to='/'>ishare</NavLink>
+                <NavLink to='/' onClick={hideSideBar}>ishare</NavLink>
             </span>
             <span className='text-2xl text-gray-400 cursor-pointer sm:hidden'>
                 <GoArrowLeft onClick={hideSideBar}/>

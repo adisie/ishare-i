@@ -12,9 +12,9 @@ const HomeNav = () => {
     <div className="flex items-center justify-end">
         <nav className="max-w-[300px] flex items-center px-2 flex-grow">
             <ul className="w-full mt-3">
-                <li className="hover:ml-1 transition-all ease-linear duration-300 mb-2 flex items-center py-1 border-b border-emerald-800 border-opacity-[.15] w-full text-emerald-900">
+                <li className="hover:ml-1 transition-all ease-linear duration-300 mb-2 flex items-center py-1 border-b border-emerald-800 border-opacity-[.15] w-full text-emerald-900 min-w-[180px]">
                     <AiOutlineHome className="inline-block text-2xl mr-1"/>
-                    <NavLink className='flex-grow text-sm'>
+                    <NavLink to='/' className='flex-grow text-sm'>
                         Home
                     </NavLink>
                 </li>
@@ -26,7 +26,7 @@ const HomeNav = () => {
                 </li>
                 <li className="hover:ml-1 hover:mt-1 transition-all ease-linear duration-300 mb-2 flex items-center py-1 border-b border-emerald-800 border-opacity-[.15] w-full text-emerald-900">
                     <PiUsersThreeThin className="inline-block text-2xl mr-1"/>
-                    <NavLink className='flex-grow text-sm'>
+                    <NavLink to='/groups' className='flex-grow text-sm'>
                         Groups
                     </NavLink>
                 </li>
