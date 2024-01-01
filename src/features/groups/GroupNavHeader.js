@@ -1,16 +1,29 @@
 import { NavLink } from "react-router-dom"
+import { useDispatch } from "react-redux"
+
+// actions
+import { mainNavigator } from "../easy-nav/easyNavSlice"
 
 import { GoArrowLeft } from "react-icons/go"
 import { CiSearch } from "react-icons/ci"
 import { FaCirclePlus } from "react-icons/fa6"
 
 const GroupNavHeader = () => {
+
+    // hooks
+    const dispatch = useDispatch()
+
+    // navigator handler
+    const mainNavigatorHandler = () => {
+        dispatch(mainNavigator('HOME'))
+    }
+
   return (
     <div className="h-[42px] bg-emerald-800 flex items-center justify-end">
         {/* back to home */}
         <div className="flex items-center ml-1">
             <span className="text-2xl text-gray-300 mr-1 cursor-pointer">
-                <GoArrowLeft />
+                <NavLink to='/' onClick={mainNavigatorHandler}><GoArrowLeft/></NavLink>
             </span>
         </div>
         {/* search bar */}
